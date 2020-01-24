@@ -1,0 +1,24 @@
+<h1>Projects</h1>
+<h4>Sort By: </h4>
+<a href="/?sort=start">Start</a><span> | </span>
+<a href="/?sort=end">End</a><span> | </span>
+<a href="/?sort=goal">Goal</a><span> | </span>
+<a href="/?sort=contributions">Total Contributions</a><span> | </span>
+<a href="/?sort=fullyFunded">View Fully Funded Projects</a><span> | </span>
+<a href="/?sort=notFullyFunded">View Not Fully Funded Projects</a>
+<br>
+<a href="/?sort={{orderType}}&sortDirection=ascending">Ascending</a><span> | </span>
+<a href="/?sort={{orderType}}&sortDirection=descending">Descending</a>
+
+<!-- Part 1: View all projects -->
+<!-- YOUR CODE HERE -->
+<div>&nbsp</div>
+{{#each projects}}
+    <div><a href="/project/{{_id}}">{{title}}</a></div>
+{{/each}}
+<!-- Part 2: Create new project -->
+<!-- YOUR CODE HERE -->
+<br>
+<p>
+    <a href="/new">Create new project</a>
+</p>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create new post</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+
+    <link rel="stylesheet" href="/public/css/main.css">
+    </link>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Part 3: View a single project -->
+    <!-- YOUR CODE HERE -->
+    <h1>{{title}}</h1>
+    <h3>Goal: ${{goal}}</h3>
+    <h5>Start Date: {{start}}</h5>
+    <h5>End Date: {{end}}</h5>
+    <p>Description: {{description}}</p>
+    <p>Category: {{category}}</p>
+    <form action="/project/{{id}}/edit" method="GET">
+        <button type="submit">Edit Project</button>
+    </form>
+
+    <!-- Part 4: Contribute to a project -->
+    <!-- YOUR CODE HERE -->
+
+    <form action="/project/{{id}}" method="POST">
+        <h3>Support the cause here!</h3>
+        <p>
+            <div>
+                <label for="name">Name</label>
+            </div>
+            <input type="text" name="name" value="{{name}}">
+        </p>
+        <p>
+            <div>
+                <label for="title">Amount</label>
+            </div>
+            <input type="number" name="amount" value="{{amount}}">
+        </p>
+        <button type="submit">Donate</button>
+    </form>
+    <h4>Total contributions: ${{totalContributions}}</h4>
+    <h3>Contributors:</h3>
+    <ul style="list-style-type:none">
+        {{#each contributionsArr}}
+        <li>
+            {{this.name}}: ${{this.amount}}
+        </li>
+        {{/each}}
+    </ul>
+    <div class="progress fit-page">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{percent}}" aria-valuemin="0"
+            aria-valuemax="100" style="width:{{percent}}%">
+            {{percent}}%
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>

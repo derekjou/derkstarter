@@ -1,0 +1,51 @@
+<h2>Edit project</h2>
+
+<form action="/project/{{id}}/edit" method="POST">
+    <p>
+        <div>
+            <label for="title">Title</label>
+        </div>
+        <input type="text" name="title" value="{{title}}">
+    </p>
+    <p>
+        <div>
+            <label for="goal">Goal</label>
+        </div>
+        <input type="number" name="goal" value="{{goal}}">
+    </p>
+    <p>
+        <div>
+            <label for="description">Description</label>
+        </div>
+        <textarea name="description" id="" cols="30" rows="10">{{description}}</textarea>
+    </p>
+    <p>
+        <div>
+            <label for="start">Start date</label>
+        </div>
+        <input type="date" name="start" value="{{start}}">
+    </p>
+    <p>
+        <div>
+            <label for="end">End date</label>
+        </div>
+        <input type="date" name="end" value="{{end}}">
+    </p>
+    <p>
+        <div>
+            <label for="category">Category</label>
+        </div>
+        <select name="category">
+            <option value="Famous Muppet Frogs">Famous Muppet Frogs</option>
+            <option value="Current Black Presidents">Current Black Presidents</option>
+            <option value="The Pen is Mightier">The Pen is Mightier</option>
+            <option value="Famous Mothers">Famous Mothers</option>
+            <option value="Drummers Named Ringo">Drummers Named Ringo</option>
+            <option value="1-Letter Words">1-Letter Words</option>
+            <option value="Months that start with 'Feb'">Months that start with 'Feb'</option>
+            <option value="How Many Fingers Am I Holding Up">How Many Fingers Am I Holding Up</option>
+            <option value="Potent Potables">Potent Potables</option>
+        </select>
+    </p>
+    <button type="submit">Edit</button>
+</form>

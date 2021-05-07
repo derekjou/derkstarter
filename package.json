@@ -15,7 +15,7 @@
     "mongoose": "^5.9.4",
     "morgan": "^1.9.1",
     "strftime": "^0.10.0",
-    "underscore": "^1.9.2"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
